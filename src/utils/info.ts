@@ -1,4 +1,4 @@
-export interface Experience {
+export interface WorkHistory {
 	id: string;
 	title: string;
 	company: string;
@@ -6,7 +6,7 @@ export interface Experience {
 	responsibilities: string[];
 }
 
-export const experiences: Experience[] = [
+export const workHistory: WorkHistory[] = [
 	{
 		id: "appstream-studio",
 		title: "founding senior full stack engineer",
@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
 	{
 		id: "jet-ventures",
 		title: "senior software engineer",
-		company: "jet ventures llc",
+		company: "jet ventures",
 		period: "oct 2022 – present",
 		responsibilities: [
 			"maintain and enhance novo2, a web-based enterprise scheduling application",

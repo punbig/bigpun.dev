@@ -10,9 +10,10 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import type * as React from "react";
-import { DefaultCatchBoundary } from "~/components/DefaultCatchBoundary";
-import { NotFound } from "~/components/NotFound";
+import { DefaultCatchBoundary } from "~/components/default-catch-boundary";
 import { Nav } from "~/components/nav";
+import { NotFound } from "~/components/not-found";
+import { ThemeProvider, useTheme } from "~/components/theme-provider";
 import appCss from "~/styles/app.css?url";
 import { seo } from "~/utils/seo";
 
@@ -60,16 +61,19 @@ function RootComponent() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
       <body>
-        <div className="p-2 flex gap-2 text-lg">
-          <Nav />
-        </div>
-        <hr />
-        {children}
+        <ThemeProvider>
+          <main className="min-h-screen bg-linear-to-br from-background to-muted">
+            <Nav />
+            <div className="container mx-auto px-4 pt-4">
+              <div className="max-w-4xl mx-auto">{children}</div>
+            </div>
+          </main>
+        </ThemeProvider>
         <TanStackRouterDevtools position="bottom-right" />
         <ReactQueryDevtools buttonPosition="bottom-left" />
         <Scripts />
