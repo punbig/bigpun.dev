@@ -21,7 +21,7 @@ export function Nav() {
         </Link>
 
         <div className="flex items-center gap-4 md:gap-8">
-          <div className="flex gap-4 md:gap-8 font-body text-sm md:text-base">
+          <div className="flex gap-4 md:gap-8 font-body text-sm md:text-base lg:text-lg xl:text-xl">
             {nav.map((item) => (
               <Link
                 key={item.to}

@@ -9,7 +9,7 @@ export interface WorkHistory {
 export const workHistory: WorkHistory[] = [
   {
     id: "appstream-studio",
-    title: "founding senior full stack engineer",
+    title: "founding swe",
     company: "appstream studio",
     period: "may 2023 – present",
     responsibilities: [

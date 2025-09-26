@@ -8,9 +8,9 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <>
+    <div className="space-y-4 lg:space-y-8 flex flex-col">
       <IntroductionSection />
       <WorkHistorySection />
-    </>
+    </div>
   );
 }

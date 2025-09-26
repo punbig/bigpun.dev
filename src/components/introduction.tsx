@@ -5,11 +5,11 @@ export function IntroductionSection() {
     new Date().getFullYear() - personalInfo.workStartDate.getFullYear();
 
   return (
-    <div className="mb-2 text-left">
-      <h1 className="text-xl md:text-2xl font-bold mb-2">
+    <div className="text-left space-y-2">
+      <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
         {personalInfo.name}
       </h1>
-      <p className="text-muted-foreground text-sm md:text-base">
+      <p className="text-muted-foreground text-sm md:text-base lg:text-lg xl:text-xl">
         I've been around for {yearsOfExperience}+ years. currently working as{" "}
         {personalInfo.title}{" "}
         <a
