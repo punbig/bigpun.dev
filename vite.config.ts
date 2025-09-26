@@ -1,4 +1,4 @@
-import netlify from "@netlify/vite-plugin-tanstack-start";
+import { cloudflare } from '@cloudflare/vite-plugin'
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
@@ -16,6 +16,6 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart(),
     viteReact(),
-    netlify(),
+    cloudflare({ viteEnvironment: { name: 'ssr' } }),
   ],
 });
