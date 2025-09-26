@@ -1,4 +1,4 @@
-export interface WorkHistory {
+export interface CareerItem {
   id: string;
   title: string;
   company: string;
@@ -6,7 +6,7 @@ export interface WorkHistory {
   responsibilities: string[];
 }
 
-export const workHistory: WorkHistory[] = [
+export const career: CareerItem[] = [
   {
     id: "appstream-studio",
     title: "founding swe",
@@ -16,18 +16,16 @@ export const workHistory: WorkHistory[] = [
       "lead full-stack development of web and mobile applications using react, typescript, and modern frameworks",
       "architect high-performance, scalable systems with robust ci/cd pipelines and cloud infrastructure",
       "develop generative ai tools, conversational agents, and semantic search engines",
-      "mentor junior developers and establish engineering best practices",
     ],
   },
   {
     id: "jet-ventures",
     title: "senior software engineer",
-    company: "jet ventures",
+    company: "jet ventures llc",
     period: "oct 2022 – present",
     responsibilities: [
       "maintain and enhance novo2, a web-based enterprise scheduling application",
       "built automation tools for importing files into database using python",
-      "technologies: angular, node.js, mysql, aws",
     ],
   },
   {
@@ -56,10 +54,11 @@ export const workHistory: WorkHistory[] = [
 ];
 
 export const personalInfo = {
+  mail: 'hello@bigpun.dev',
   name: "cesar bustamante",
-  title: "founding software engineer",
+  title: "founding swe",
   company: "@AppStreamStudio",
   companyUrl: "https://appstream.studio/",
-  description: "building things on the web. love react & typescript.",
+  description: "love react & typescript",
   workStartDate: new Date('07/01/2018')
 };

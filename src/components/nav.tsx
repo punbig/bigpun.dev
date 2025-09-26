@@ -11,7 +11,7 @@ export function Nav() {
           activeProps={{
             className: "text-primary font-medium",
           }}
-          className="flex items-center"
+          className="items-center hidden md:flex"
         >
           <img
             src="/rocky.png"
@@ -20,8 +20,8 @@ export function Nav() {
           />
         </Link>
 
-        <div className="flex items-center gap-4 md:gap-8">
-          <div className="flex gap-4 md:gap-8 font-body text-sm md:text-base lg:text-lg xl:text-xl">
+        <div className="flex w-full md:w-auto items-center gap-4 md:gap-8">
+          <div className="flex w-full md:w-auto gap-4 md:gap-8 font-body text-sm md:text-base lg:text-lg xl:text-xl">
             {nav.map((item) => (
               <Link
                 key={item.to}
@@ -34,28 +34,34 @@ export function Nav() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href="https://github.com/punbig"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition-colors"
-              title="GitHub"
-            >
+            <ExternalNavItem href="https://github.com/punbig" title="GitHub">
               github
-            </a>
-            <a
-              href="/llms.txt"
-              target="_blank"
-              className="text-foreground hover:text-primary transition-colors"
-              title="LLMs.txt"
-              rel="noopener"
-            >
+            </ExternalNavItem>
+            <ExternalNavItem href="/llms.txt" title="llms.txt">
               llms.txt
-            </a>
+            </ExternalNavItem>
           </div>
           <ModeToggle />
         </div>
       </div>
     </nav>
+  );
+}
+
+function ExternalNavItem({
+  children,
+  ...props
+}: {
+  children: React.ReactNode;
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-foreground hover:text-primary transition-colors"
+      {...props}
+    >
+      {children}
+    </a>
   );
 }

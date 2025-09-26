@@ -1,4 +1,5 @@
 import { personalInfo } from "~/utils/info";
+import { SectionParagraph, SectionTitle } from "./typography";
 
 export function IntroductionSection() {
   const yearsOfExperience =
@@ -6,12 +7,9 @@ export function IntroductionSection() {
 
   return (
     <div className="text-left space-y-2">
-      <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-        {personalInfo.name}
-      </h1>
-      <p className="text-muted-foreground text-sm md:text-base lg:text-lg xl:text-xl">
-        I've been around for {yearsOfExperience}+ years. currently working as{" "}
-        {personalInfo.title}{" "}
+      <SectionTitle>{personalInfo.name}</SectionTitle>
+      <SectionParagraph>
+        i've been around for {yearsOfExperience}+ years. {personalInfo.title}{" "}
         <a
           className="text-violet-500"
           href={personalInfo.companyUrl}
@@ -19,9 +17,10 @@ export function IntroductionSection() {
           rel="noopener"
         >
           {personalInfo.company}
-        </a>{" "}
+        </a>
+        {". "}
         {personalInfo.description}
-      </p>
+      </SectionParagraph>
     </div>
   );
 }
