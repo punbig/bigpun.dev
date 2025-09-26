@@ -5,7 +5,7 @@ export function IntroductionSection() {
     new Date().getFullYear() - personalInfo.workStartDate.getFullYear();
 
   return (
-    <div className="mb-6 text-left">
+    <div className="mb-2 text-left">
       <h1 className="text-xl md:text-2xl font-bold mb-2">
         {personalInfo.name}
       </h1>

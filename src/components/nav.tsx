@@ -4,7 +4,7 @@ import { ModeToggle } from "./mode-toggle";
 
 export function Nav() {
   return (
-    <nav className="w-full py-4 px-4 md:px-8">
+    <nav className="w-full py-2 md:py-4 px-4 md:px-8">
       <div className="max-w-4xl mx-auto flex justify-between items-center">
         <Link
           to="/"
@@ -16,7 +16,7 @@ export function Nav() {
           <img
             src="/rocky.png"
             alt="pug"
-            className="w-8 h-8 md:w-10 md:h-10 object-contain"
+            className="size-8 md:size-10 object-contain"
           />
         </Link>
 
